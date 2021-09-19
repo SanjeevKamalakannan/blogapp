@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Blogs</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+  
+<style>
+
+body{
+    background-color : #AED6F1;
+}
+.card{
+    background-color:pink;
+     border: 3px solid black;
+}
+#post{
+    margin: 3px;
+}
+#image{
+    margin: 3px;
+}
+#uploads{
+    background-color: #D5F5E3 ;
+    color: black;
+    font-weight:2px;
+    border: 2px solid black;
+}
+</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Blogify <i class="fa fa-pencil-square-o" aria-hidden="true"></i></i></a>
+                
+                <a class="nav-item nav-link" href="#" onclick="myData()" >View my blogs</a>
+                <a class="nav-item nav-link"  href="#" onclick="getData()">View all blogs</a>
+                <a class="nav-item nav-link"  href="#" onclick="logout()">Logout</a>
+              </div>
+            </div>
+          </nav>
+
+        <div class="container mt-2">
+            <div class="card">
+                <div class="card-body">
+                    <form id="post-form">
+                        <h3>Make a blog</h3>  
+                        <!-- <input type="text" placeholder="Enter name of the blog author"class="form-control" id="name" >    -->
+                        <textarea id="post" class="form-control">  </textarea>
+                        <input type="file" class="form-control" id="image" accept="images/*" >
+                        <div class="text-center"> 
+                        <button type="button" id="uploads" class="btn btn-success" onclick="upload()">  Upload  </button> 
+                        </div> 
+                        
+                    </form> 
+                </div>
+            </div>
+
+            <div class="row mt-4" id="posts">
+                
+            </div>
+        </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+        apiKey: "AIzaSyCfI4pJvsi9Yu8JKUqHSFh-1bvhqg25vnw",
+        authDomain: "myproject-bbade.firebaseapp.com",
+        databaseURL: "https://myproject-bbade-default-rtdb.firebaseio.com",
+        projectId: "myproject-bbade",
+        storageBucket: "myproject-bbade.appspot.com",
+        messagingSenderId: "923993510153",
+        appId: "1:923993510153:web:86ec4b317dee2aa13803d8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();  
+</script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="default.js"></script>
+        
+
+</body>
+</html>
